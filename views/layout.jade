@@ -1,7 +1,23 @@
-doctype 5
+doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title= title + ' | ' + appname
+
+    link(rel="stylesheet", href="/bootstrap/bootstrap.css")
+    link(rel='stylesheet', href='/stylesheets/main.css')
+
   body
-    block content
+    .container
+      .navbar.navbar-default
+        .container
+          .nav-bar-header
+            a.navbar-brand(href='/')= appname
+      .alert.alert-dismissable
+      h1= title
+      p Welcome to Express.js ToDo app by 
+        a(href='http://gregbenner.ca') Greg
+      
+      block content
+
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/main.js')
